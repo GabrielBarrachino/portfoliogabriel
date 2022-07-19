@@ -1,0 +1,584 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    color: #393758;
+}
+
+::selection{
+    background-color: #393758;
+    color: #fff;
+}
+
+
+body{
+    background-color: #EAEDFA;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+
+/*============================== INÍCIO HEADER ==============================*/
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #EAEDFA;
+    width: 100%;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    padding: 1.4rem 11%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.logo-menu{
+    font-size: 2.3rem;
+    color: #393758;
+    cursor: pointer;
+}
+
+.logo-menu span{
+    color: #0075FE;
+}
+
+/*============================== MENU HEADER ==============================*/
+.nav-menu{
+    display: flex;
+    gap: 2.5rem;
+}
+
+.nav-menu a{
+    position: relative;
+    font-size: 1.03rem;
+    font-weight: 500;
+    color: #615B5B; 
+}
+
+
+.nav-menu a:hover{
+    color: #2B2929; 
+}
+
+.nav-menu a::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #6DB0FF;
+    bottom: 0;
+    left: -5px;
+    z-index: -1;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+
+.nav-menu a:hover::after{
+    opacity: 0.4;
+    width: 100%;
+}
+/*============================== FIM MENU HEADER ==============================*/
+
+/*============================== FIM HEADER ==============================*/
+
+section{
+    padding-top: 8rem;
+}
+
+/*============================== INÍCIO HOME ==============================*/
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.home .main-home .p-home{
+    color: #615B5B;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding-bottom: 2rem;
+}
+
+.home .main-home .p-home span{
+    color: #6DB0FF;
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+
+.home .main-home .titulo-home{
+    font-size: 3.2rem;
+    padding-bottom: 50px;
+    color: #0075FE;
+}
+
+
+.home .main-home .titulo-home span{
+    font-size: 2.6rem;
+    line-height: 65px;
+    color: #2B2929;
+}
+
+
+.home .main-home .btn-contato{
+    background: linear-gradient(to right, #393758, #645eb9);
+    box-shadow: 3px 6px 12px 2px #888888;
+    padding: 17px 32px;
+    border-radius: 40px;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: .3s;
+}
+
+.home .main-home .btn-contato:hover{
+    padding: 19px 34px;
+    background: linear-gradient(to right, #0075FE, #6DB0FF);
+    color: #2B2929;
+    font-weight: 700;
+}
+
+.home .main-home .btn-download{
+    color: #615B5B;
+    margin-left: 50px;
+    padding-bottom: 10px;
+    border-bottom: 5px solid #6DB0FF;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: .3s;
+} 
+
+.home .main-home .btn-download:hover{
+    color: #2B2929;
+    border-bottom: 5px solid #393758;
+} 
+
+.home .img-home img{
+    width: 32vw;
+    cursor: pointer;
+    animation: float 3s linear infinite;
+}
+
+@keyframes float{
+    0%, 100%{
+        transform: translateY(0rem);
+    }
+
+    50%{
+        transform: translateY(-2.5rem);
+    }
+}
+
+.social-media{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.social-media i{
+    font-size: 30px;
+    color: #393758;
+    transition: .3s;
+}
+
+.social-media i:hover{
+    color: #0075FE;
+}
+/*============================== FIM HOME ==============================*/
+
+
+/*============================== INÍCIO SOBRE ==============================*/
+.sobre{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 5rem;
+}
+
+.sobre .img-sobre img{
+    width: 35vw;
+    margin: 0 60px 0 -50px;
+}
+
+.sobre .main-sobre .sobre-titulo{
+    color: #615B5B;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 8px;
+    border-left: 5px solid #6DB0FF;
+}
+
+
+.sobre .main-sobre .sobre-h1{
+    color: #2B2929;
+    font-size: 2.2rem;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font-weight: 800;
+}
+
+
+.sobre .main-sobre .texto-sobre{
+    color: #615B5B;
+    padding-bottom: 13px;
+    font-size: 1.15rem;
+}
+
+
+.sobre .main-sobre .texto-sobre2{
+    color: #615B5B;
+    padding-bottom: 50px;
+    font-size: 1.15rem;
+}
+
+.sobre .main-sobre .btn-contato{
+    background: linear-gradient(to right, #393758, #645eb9);
+    box-shadow: 3px 6px 12px 2px #888888;
+    padding: 17px 32px;
+    border-radius: 40px;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: .3s;
+}
+
+.sobre .main-sobre .btn-contato:hover{
+    background: linear-gradient(to right, #0075FE, #6DB0FF);
+    color: #2B2929;
+    padding: 19px 34px;
+    font-weight: 700;
+}
+/*============================== FIM SOBRE ==============================*/
+
+
+/*============================== INÍCIO HABILIDADES ==============================*/
+.habilidade{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 12rem;
+}
+
+.habilidade .main-hab .hab-titulo{
+    color: #615B5B;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 8px;
+    border-left: 5px solid #6DB0FF;
+}
+
+.habilidade .main-hab .hab-h1{
+    color: #2B2929;
+    font-size: 2.6rem;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font-weight: 900;
+}
+
+.habilidade .skills .conhfe{
+    color: #393758;
+    font-weight: 800;
+    font-size: 1.7rem;
+    padding-bottom: 30px;
+}
+
+.habilidade .skills .conhfe span{
+    color: #6DB0FF;
+    font-weight: 900;
+    font-size: 1.8rem;
+}
+
+
+.habilidade .skills{
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 15px;
+    padding: 18px 28px;
+    box-shadow: 8px 17px 18px 3px #b3b2b2;
+    border-radius: 7px;
+}
+
+.habilidade .skills .skill-box{
+    width: 100%;
+}
+
+.habilidade .skills .skill-box .title{
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #2B2929;
+}
+
+.habilidade .skills .skill-box .title-css{
+    margin-top: 40px;
+}
+
+
+.habilidade .skills .skill-box .skill-bar{
+    width: 100%;
+    height: 8px;
+    border-radius: 6px;
+    margin-top: 6px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+
+.habilidade .skill-bar .skill-per{
+    position: relative;
+    display: block;
+    border-radius: 6px;
+    height: 100%;
+    width: 80%;
+    background: #0075FE;
+    animation: progress 0.4s ease-in-out forwards;
+}
+@keyframes progress{
+    0%{
+        width: 0;
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.habilidade .skill-bar .skill-per.css{
+    width: 70%;
+    animation-delay: 0.1s;
+}
+
+.habilidade .skill-bar .skill-per.javasc{
+    width: 40%;
+    animation-delay: 0.2s;
+}
+
+.habilidade .skill-bar .skill-per.figma{
+    width: 55%;
+    animation-delay: 0.3s;
+}
+
+.habilidade .skill-bar .skill-per.ux{
+    width: 45%;
+    animation-delay: 0.3s;
+}
+
+
+.habilidade .skill-bar .skill-per .tooltip{
+    position: absolute;
+    right: -22px;
+    top: -33px;
+    background: #0075FE;
+    font-size: 15px;
+    color: #fff;
+    padding: 5px 9px;
+    font-weight: 600;
+    border-radius: 4px;
+    z-index: 1;
+}
+
+.habilidade .tooltip::before{
+    position: absolute;
+    content: '';
+    left: 50%;
+    bottom: -2px;
+    height: 10px;
+    width: 10px;
+    background-color: #0075FE;
+    transform: translateX(-50%) rotate(45deg);
+    z-index: -1;
+}
+/*============================== FIM HABILIDADES ==============================*/
+
+
+/*============================== INÍCIO PORTFÓLIO ==============================*/
+.portfolio{
+    padding-top: 13rem;
+}
+
+.portfolio .hab-titulo{
+    color: #615B5B;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 8px;
+    border-left: 5px solid #6DB0FF;
+}
+
+.container-portfolio{
+    overflow: initial;
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio-content{
+    display: flex;
+    align-items: center;
+    padding: 1rem 3.5rem;
+}
+
+.portfolio-data{
+    padding-left: 2rem;
+}
+
+.portfolio-img{
+    width: 415px;
+    border-radius: .5rem;
+    justify-self: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.portfolio-title{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.portfolio-descricao{
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+
+.portfolio-button{ 
+    font-size: 13px;
+    display: inline-flex;
+    height: 35px;
+    padding: 12px;
+    background-color: #393758;
+    color: #fff;
+    border-radius: 8px;
+}
+
+.portfolio-button i{ 
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    height: 14px;
+    font-size: 13px;
+    margin-left: 7px;
+}
+
+
+.portfolio-button:hover i{ 
+    transform: translateX(.25rem);
+}
+
+.portfolio-button:hover{ 
+    transition: .4s;
+    padding-right: 20px;
+    background-color: #0075FE;
+}
+
+
+.swiper-button-prev::after,
+.swiper-button-next::after{
+    content: '';
+}
+
+.swiper-portfolio-icon{
+    font-size: 2rem;
+    color: #6DB0FF;
+}
+
+.swiper-button-prev{
+    left: -.6rem;
+}
+/*============================== FIM PORTFÓLIO ==============================*/
+
+
+/*============================== INÍCIO CONTATO ==============================*/
+.contato{
+    margin-top: 70px;
+}
+
+
+.contato .hab-titulo{
+    color: #615B5B;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 8px;
+    border-left: 5px solid #6DB0FF;
+}
+
+.contatos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+    gap: 65px;
+}
+
+.contatos i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin-bottom: 23px;
+    background-color: #393758;
+    color: #6DB0FF;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.contatos .email{
+    margin-left: 88px;
+}
+
+.contatos .telefone{
+    margin-left: 25px;
+}
+
+.contatos .linkedin{
+    margin-left: 47px;
+}
+
+.contatos .git{
+    margin-left: 48px;
+}
+
+.contatos .insta{
+    margin-left: 30px;
+}
+
+
+.title-contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #2B2929;
+}
+
+.p-contact{
+    color: #615B5B;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-top: 8px;
+}
+/*============================== FIM CONTATO ==============================*/
+
+
+
+/*=============== Bala de rolagem ==================*/
+::-webkit-scrollbar{
+    width: 15px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: #b3b2b2;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #393758;
+    border-radius: 15px;
+}
